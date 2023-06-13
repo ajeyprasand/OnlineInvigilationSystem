@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Success</title>
+</head>
+<body>
+  <h1>Thank you for completing the exam!</h1>
+  <p>Your results will be available shortly.</p>
+
+         <!-- Add a logout button -->
+         <form method="POST" action="logout.php">
+          <button type="submit">Logout</button>
+      </form>
+      <script>
+        window.history.pushState(null, null, window.location.href);
+        window.onpopstate = function () {
+            window.history.go(1);
+        };
+        window.onbeforeunload = function() {
+          return "";
+        };
+      </script>
+</body>
+</html>
